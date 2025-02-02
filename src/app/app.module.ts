@@ -7,10 +7,11 @@ import Aura from '@primeng/themes/aura';
 import { providePrimeNG } from 'primeng/config';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [AppRoutingModule, BrowserModule, CommonModule],
+    imports: [AppRoutingModule, BrowserModule, CommonModule, LayoutModule],
     providers: [
         // provideRouter(appRoutes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }), withEnabledBlockingInitialNavigation()),
         provideHttpClient(withFetch()),

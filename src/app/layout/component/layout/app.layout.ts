@@ -1,17 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, Renderer2, ViewChild } from '@angular/core';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { LayoutService } from '../../service/layout.service';
-import { AppFooter } from '../footer/app.footer';
 import { AppSidebar } from '../sidebar/app.sidebar';
 import { AppTopbar } from '../topbar/app.topbar';
 
 @Component({
     selector: 'app-layout',
     templateUrl: './app.layout.html',
-    standalone: true,
-    imports: [CommonModule, AppTopbar, AppSidebar, RouterModule, AppFooter]
+    standalone: false
 })
 export class AppLayout {
     overlayMenuOpenSubscription: Subscription;

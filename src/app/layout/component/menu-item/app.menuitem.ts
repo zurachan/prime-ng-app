@@ -1,9 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { CommonModule } from '@angular/common';
 import { Component, HostBinding, Input } from '@angular/core';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { RippleModule } from 'primeng/ripple';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { LayoutService } from '../../service/layout.service';
@@ -12,7 +10,8 @@ import { LayoutService } from '../../service/layout.service';
     // eslint-disable-next-line @angular-eslint/component-selector
     selector: '[app-menuitem]',
     templateUrl: './app.menuitem.html',
-    imports: [CommonModule, RouterModule, RippleModule],
+    standalone: false,
+    // imports: [CommonModule, RouterModule, RippleModule],
     animations: [
         trigger('children', [
             state(
