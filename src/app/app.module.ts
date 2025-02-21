@@ -7,18 +7,14 @@ import Aura from '@primeng/themes/aura';
 import { providePrimeNG } from 'primeng/config';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { LandingModule } from './landing/landing.module';
 import { LayoutModule } from './layout/layout.module';
-import { Notfound } from './pages/notfound/notfound';
 
 @NgModule({
-    declarations: [AppComponent, Notfound],
-    imports: [AppRoutingModule, BrowserModule, CommonModule, LayoutModule],
-    providers: [
-        // provideRouter(appRoutes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }), withEnabledBlockingInitialNavigation()),
-        provideHttpClient(withFetch()),
-        provideAnimationsAsync(),
-        providePrimeNG({ theme: { preset: Aura, options: { darkModeSelector: '.app-dark' } } })
-    ],
+    declarations: [AppComponent],
+    imports: [BrowserModule, CommonModule, AppRoutingModule, LayoutModule, DashboardModule, LandingModule],
+    providers: [provideHttpClient(withFetch()), provideAnimationsAsync(), providePrimeNG({ theme: { preset: Aura, options: { darkModeSelector: '.app-dark' } } })],
     bootstrap: [AppComponent]
 })
 export class AppModule {}
