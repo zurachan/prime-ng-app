@@ -16,6 +16,6 @@ import { Landing } from './landing';
 @NgModule({
     imports: [CommonModule, RouterModule, RippleModule, StyleClassModule, ButtonModule, DividerModule],
     declarations: [Landing, TopbarWidget, HeroWidget, FeaturesWidget, HighlightsWidget, PricingWidget, FooterWidget],
-    exports: [Landing, TopbarWidget, HeroWidget, FeaturesWidget, HighlightsWidget, PricingWidget, FooterWidget]
+    exports: [Landing]
 })
 export class LandingModule {}
