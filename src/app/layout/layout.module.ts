@@ -17,6 +17,7 @@ import { AppTopbar } from './component/topbar/app.topbar';
 
 @NgModule({
     imports: [CommonModule, FormsModule, SelectButtonModule, ButtonModule, StyleClassModule, RouterModule, RippleModule],
-    declarations: [AppConfigurator, AppFloatingConfigurator, AppFooter, AppLayout, AppMenu, AppMenuitem, AppSidebar, AppTopbar]
+    declarations: [AppConfigurator, AppFloatingConfigurator, AppFooter, AppLayout, AppMenu, AppMenuitem, AppSidebar, AppTopbar],
+    exports: [AppConfigurator, AppFloatingConfigurator, AppFooter, AppLayout, AppMenu, AppMenuitem, AppSidebar, AppTopbar]
 })
 export class LayoutModule {}

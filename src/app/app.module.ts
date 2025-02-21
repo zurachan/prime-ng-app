@@ -8,9 +8,10 @@ import { providePrimeNG } from 'primeng/config';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
+import { Notfound } from './pages/notfound/notfound';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, Notfound],
     imports: [AppRoutingModule, BrowserModule, CommonModule, LayoutModule],
     providers: [
         // provideRouter(appRoutes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }), withEnabledBlockingInitialNavigation()),

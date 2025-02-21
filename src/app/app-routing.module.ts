@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppLayout } from './layout/component/layout/app.layout';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Documentation } from './pages/documentation/documentation';
-import { Landing } from './pages/landing/landing';
+
 import { Notfound } from './pages/notfound/notfound';
 
 export const appRoutes: Routes = [
@@ -17,9 +17,9 @@ export const appRoutes: Routes = [
             { path: 'pages', loadChildren: () => import('./pages/pages.routes') }
         ]
     },
-    { path: 'landing', component: Landing },
+    { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then((m) => m.LandingModule) },
     { path: 'notfound', component: Notfound },
-    { path: 'auth', loadChildren: () => import('./pages/auth/auth.routes') },
+    { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then((m) => m.AuthModule) },
     { path: '**', redirectTo: '/notfound' }
 ];
 
